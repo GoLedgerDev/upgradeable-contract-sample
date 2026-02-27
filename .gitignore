@@ -40,8 +40,7 @@ foundry/broadcast/*/1337/
 foundry/broadcast/**/dry-run/
 
 # Best practice for lean repos: reinstall deps with forge install
-foundry/lib/
-foundry/.gitmodules
+foundry/lib
 
 # Migration temporary artifacts
 nested-git-folders.txt
