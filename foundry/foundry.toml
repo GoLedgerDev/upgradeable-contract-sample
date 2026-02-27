@@ -1,0 +1,17 @@
+[profile.default]
+src = "src"
+out = "out"
+ast = true
+ffi = true
+fs_permissions = [{ access = "read-write", path = "./" }]
+build_info = true
+extra_output = ["storageLayout"]
+libs = ["lib"]
+remappings = [
+    "@openzeppelin/=lib/openzeppelin-contracts/",
+    "@openzeppelin-contracts-upgradeable/=lib/openzeppelin-contracts-upgradeable/",
+    "@openzeppelin-foundry-upgrades/=lib/openzeppelin-foundry-upgrades/src/",
+]
+evm_version = "prague"
+
+# See more config options https://github.com/foundry-rs/foundry/blob/master/crates/config/README.md#all-options

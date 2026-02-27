@@ -1,0 +1,57 @@
+# =========================
+# Monorepo-wide ignores
+# =========================
+
+# OS / editor
+.DS_Store
+.idea/
+.vscode/*
+!.vscode/extensions.json
+*.swp
+*.swo
+
+# Environment files
+.env
+.env.*
+*.local
+
+# =========================
+# Frontend (Vite)
+# =========================
+frontend/node_modules/
+frontend/dist/
+frontend/dist-ssr/
+frontend/*.log
+frontend/npm-debug.log*
+frontend/yarn-debug.log*
+frontend/yarn-error.log*
+frontend/pnpm-debug.log*
+frontend/lerna-debug.log*
+
+# =========================
+# Foundry
+# =========================
+foundry/cache/
+foundry/out/
+
+# Keep committed broadcast structure, ignore local-only run artifacts
+foundry/broadcast/*/31337/
+foundry/broadcast/**/dry-run/
+
+# Best practice for lean repos: reinstall deps with forge install
+foundry/lib/
+foundry/.gitmodules
+
+# =========================
+# Besu runtime artifacts
+# =========================
+besu/genesis/
+besu/nodes/
+besu/docker/nodes*.yaml
+besu/config/qbftConfigFile.json
+besu/.env.network
+
+# Downloaded Besu binaries
+besu/bin/
+besu/lib/
+besu/besu.autocomplete.sh
