@@ -36,11 +36,16 @@ foundry/out/
 
 # Keep committed broadcast structure, ignore local-only run artifacts
 foundry/broadcast/*/31337/
+foundry/broadcast/*/1337/
 foundry/broadcast/**/dry-run/
 
 # Best practice for lean repos: reinstall deps with forge install
 foundry/lib/
 foundry/.gitmodules
+
+# Migration temporary artifacts
+nested-git-folders.txt
+nested-git-backup.tar.gz
 
 # =========================
 # Besu runtime artifacts
