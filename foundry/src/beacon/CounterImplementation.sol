@@ -8,6 +8,11 @@ contract CounterImplementation is Initializable, OwnableUpgradeable {
     uint256 public number;
     uint256[50] private _gap;
 
+    /// @custom:oz-upgrades-unsafe-allow constructor
+    constructor() {
+        _disableInitializers();
+    }
+
     function initialize(address owner) public initializer {
         __Ownable_init(owner);
         number = 0;

@@ -8,6 +8,11 @@ import {UUPSUpgradeable} from "@openzeppelin-contracts-upgradeable/contracts/pro
 contract Counter is Initializable, OwnableUpgradeable, UUPSUpgradeable {
     uint256 public number;
 
+    /// @custom:oz-upgrades-unsafe-allow constructor
+    constructor() {
+        _disableInitializers();
+    }
+
     function initialize() public initializer {
         __Ownable_init(msg.sender);
         number = 0;
